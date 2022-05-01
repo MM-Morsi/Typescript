@@ -1,0 +1,71 @@
+cross platform - online editor 
+_________________________________
+JS is dynamic: declare, define and redefine 
+TS: strong typing 
+first class inline documentation 
+_________________________________
+TS = superset of javascript 
+compile down from JS - you can use JS within type script 
+Microsoft product 
+_________________________________
+https://www.typescriptlang.org/
+_________________________________
+Typescript compiler: npm environment 
+global or project level 
+    npm install typescript --save-dev
+* --save-dev: needed at development time 
+* -g: global access
+Check if it works: 
+tsc -v
+typescript if highly backwards compatible 
+_________________________________
+npx tsc -init
+_________________________________
+tsconfig.json
+* configure the typescript configuration file to the root
+* include: "src/**/*"
+    * run command: tsc
+    * compiles down to js
+* you need to create a src folder to have all of your ts files 
+* complierOptions
+    * choose which version to target 
+    * "target": "ES3"
+    * "outDir": "build
+        - to define a directory 
+_________________________________
+typescript for type checking only 
+- Inside the "compilerOptions": Use Babel to transpile to the final output 
+* "target": "esnext"
+    - latest js version 
+    - strip types 
+* "noEmit": true
+    - do not emit or write out anything to the disk at all 
+    - you will not get a file 
+_________________________________
+You can it to any js application easily 
+- Inside the "compilerOptions"
+    * "allowJs": true,
+      "checkJs": true,
+    * inside js file check ts errors 
+- app.js has 3 ts errors 
+    * tsc command will return the errors 
+    * ajax - string type 
+---------------------------------
+- JSDoc Syntax - don't turn the file to fully ts (just simple features)
+    * comment block
+    * syntax with @ symbol 
+    * /** */
+Example (CHECK appFixJSDoc.js)
+/**
+ * 
+ * @param {*} contactId ------> @param {number} contactId
+ * @returns 
+ */
+chang the * to number 
+so in this function:
+async function getContact(contactId) {...}
+
+the contactId argument is now number only, not string
+_________________________________
+start at: importing third party types video
+appFix.js
